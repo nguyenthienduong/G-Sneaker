@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .menu td {
+        padding: 10px;
+        text-align: center;
+      }
+      .menu th {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu fix">
+      <button id="Hide_Show">Giỏ Hàng</button>
+
+      <table style="display: none" id="AnHien" for="">
+        <tr style="color: white">
+          <th>Sản phẩm</th>
+          <th>Hình ảnh</th>
+          <th>Giá</th>
+          <th>SL</th>
+          <th>Số tiền</th>
+          <th>Chọn</th>
+        </tr>
+        <tbody style="color: white" id="giohang"></tbody>
+        <tr style="color: white">
+          <th>Tổng đơn hàng</th>
+          <th><span id="tongdonhang">0</span>$</th>
+        </tr>
+      </table>
+    </nav>
+    <script>
+      const targetAnHien = document.getElementById("AnHien");
+      const btns = document.getElementById("Hide_Show");
+      btns.onclick = () => {
+        if (targetAnHien.style.display !== "block") {
+          targetAnHien.style.display = "block";
+        } else {
+          targetAnHien.style.display = "none";
+        }
+      };
+    </script>
+    <section>
+      <div class="card">
+        <div class="card__img">
+          <img src="Nike Zoom KD 12.png" alt="" />
+        </div>
+        <h2 class="card__title">Nike Zoom KD 12</h2>
+        <p class="card__price"><span>99</span> $</p>
+
+        <div class="card__action">
+          <input type="number" min="0" max="10" value="1" autocomplete="on" />
+          <button onclick="them(this)">Add cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__img">
+          <img src="Nike Zoom KD 12.png" alt="" />
+        </div>
+        <h2 class="card__title">Nike Zoom KD 18</h2>
+        <p class="card__price"><span>90</span> $</p>
+
+        <div class="card__action">
+          <input type="number" min="0" max="10" value="1" />
+          <button onclick="them(this)">Add cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__img">
+          <img src="Nike Zoom KD 12.png" alt="" />
+        </div>
+        <h2 class="card__title">Nike Zoom KD 13</h2>
+        <p class="card__price"><span>999</span> $</p>
+
+        <div class="card__action">
+          <input type="number" min="0" max="10" value="1" />
+          <button onclick="them(this)">Add cart</button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
